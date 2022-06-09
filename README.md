@@ -26,5 +26,5 @@ The purpose of this project was to build a database that demonstrates insights w
 - Address column was split by street, city, state and zip code.
 
 ### Data Load
-- Finally, we used a relational database called Postgresql. In a total of three tables the data loaded successfully.
+- We used Postgresql, a relational database. In a total of three tables the data loaded successfully.
 - Final tables/collections are stored in the database.
