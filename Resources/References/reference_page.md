@@ -6,6 +6,13 @@
 <br>
 <br>
 #### <u>Coding</u>
+<br>Python/Pandas
 <br>https://www.codegrepper.com/code-examples/python/pandas+split+column+by+delimiter+into+multiple+columns
 <br>https://www.stackvidhya.com/change-order-of-columns-in-pandas-dataframe/
 <br>https://www.educative.io/edpresso/how-to-delete-a-column-in-pandas
+<br>https://www.geeksforgeeks.org/python-pandas-dataframe-set_index/?ref=lbp
+<br>
+<br>SQL/Postgresql
+<br>https://www.sqlines.com/postgresql/datatypes/text#:~:text=The%20only%20difference%20between%20TEXT,more%20than%20255%20characters%20long.
+<br>https://www.postgresql.org/docs/current/datatype-numeric.html#DATATYPE-FLOAT
+<br>https://www.w3schools.com/sql/sql_ref_foreign_key.asp
