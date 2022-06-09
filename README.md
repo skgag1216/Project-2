@@ -5,6 +5,7 @@
 
 ### Introduction
 This project is designed to conduct a presentation of business information or Business Intelligence by extracting, transforming, and loading data of restaurants and menus in the US that are partnered with Uber Eats.
+
 The purpose of this project was to build a database that demonstrates insights within various restaurants across the US. The database is built on by ingesting, combining, and restructuring data from our main data source into a conformed one Postgresql database. 
 
 #### Questions to be answered:
