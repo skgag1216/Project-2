@@ -51,7 +51,72 @@ restaurant_data = pd.read_csv(csvpath)
 ```
 10. Repeat steps 8-9 for restaurant menu data and create new variables, so you can easily differentiate the data frames.
 #### Data Cleanup
-11. 
+11. We kept a full list of restaurants before any data manipulation by running:
+``` Python
+original_restaurant_df = restaurant_data.copy()
+```
+12. We expanded the full address column out to street, city, and state by running:
+``` Python
+original_restaurant_df[['street', 'city', 'state', 'zip']] = original_restaurant_df['full_address'].str.split(',', 3, expand=True) 
+``` 
+13. Deleted certain columns (such as ZIP code and position) by running:
+``` Python
+del original_restaurant_df['zip']
+``` 
+14. You can reorder columns to your preference, for example:
+``` Python
+original_restaurant_df = original_restaurant_df.reindex(columns=['id','name', 'score','ratings','category', 'price_range',
+                                              'full_address', 'street', 'city', 'state', 'zip_code', 'lat', 'lng'])
+```
+15. Set the index to the restaurant's IDs by running:
+``` Python
+original_restaurant_df.set_index("id", inplace = True)
+```
+16. Repeat steps 11-14 to create new data frame with cleaned data (step 15 will be done after data cleanup). Save cleaned data frame into a new variable.
+17. Clean data by removing null values. Drop rows with NULL values in score and rating (using code to keep rows that are not null):
+``` Python
+restaurant_df = restaurant_df[restaurant_df['score'].notna()]
+restaurant_df = restaurant_df[restaurant_df['ratings'].notna()]
+```
+Drop rows with Nan values in price_range:
+```Python
+restaurant_df = restaurant_df.dropna(subset = ['price_range'])
+```
+18. Repeat step 15 to set index to Restaurant IDs.
+19. Clean up the menu data. First we will find total rows. We used this code: ```menu_data.isnull()``` in our notebook, but you can also use  ```len(<name_of_menu_df>)```
+20. Determine which rows any missing values are in ``` menu_data.isnull().sum() ```
+21. Determine whether or not you'd like to keep columns with null values (possibly reinspect CSV file within Excel). 
+
+#### Create Database Connection
+22. Create restaurant_db in pgAdmin, then run database connection code:
+``` Python
+connection_string = "enterprisedb:password@localhost:5444/restaurant_db"
+engine = create_engine(f'postgresql://{connection_string}')
+```
+<i>Note: This line of code might need to be changed depending on your machine</i>
+```enterprisedb:password@localhost:5444```
+
+23. Confirm tables by running ```engine.table_names()```
+
+<i>Note: Make sure output returns an empty list</i>
+
+#### Load Data Frames Into Database
+24. Run code for each data frame:
+``` Python
+original_restaurant_df.to_sql(name='original_restaurants', con=engine, if_exists='append', index=True)
+```
+<i>Note: Make sure to change the variable name in ```original_restaurant_df.to_sql``` and name of Table in ```name='original_restaurants``` depending on data frame. Repeat for each data frame, original restaurant data, and new cleaned data.</i>
+
+25. Run and save code inside Jupyter Notebook.
+26. Inside pgAdmin, inspect tables and create query:
+``` 
+    SELECT * FROM original_restaurants;
+    SELECT * FROM restaurants;
+    SELECT * FROM menu; 
+```
+
+
+
 
 <br>
 
