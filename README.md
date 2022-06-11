@@ -36,7 +36,22 @@ SQL functions can be used to create queries to join tables and answer questions,
 4. Make sure the libraries that are being used are installed (Pandas, OS, CSV, SQLAlchemy).
 5. Open repository in Jupyter Notebook using the appropiate command line interface.
 #### Usage
-6. 
+6. All can be done within one Jupyter Notebook. Inside the Jupyter Notebook, import all libraries listed above.
+7. For SQLAlchemy dependency, run the following line: 
+```Python 
+from sqlalchemy import create_engine
+```
+8. To import CSV data, create a variable and use ``` os.path.join ``` function, listing in quotations your folder path for the CSV files. For example:
+```Python
+csvpath = os.path.join("Repository", “RestaurantData“, "restaurants.csv”)
+```
+9. Create a new variable for data frame to be read into. Have this equal to ``` pandas.read_csv() ``` with the previously created variable inside parenthesis.
+``` Python
+restaurant_data = pd.read_csv(csvpath)
+```
+10. Repeat steps 8-9 for restaurant menu data and create new variables, so you can easily differentiate the data frames.
+#### Data Cleanup
+11. 
 
 <br>
 
@@ -83,6 +98,7 @@ SQL functions can be used to create queries to join tables and answer questions,
 - Could possibly compare highly-rated restaurants with population and menu items from these restaurants.
 
 <br> 
+
 ### Contributors
 <b>Stefanie Gagnon</b>
   - Found and chose Restaurant dataset to analyze.
