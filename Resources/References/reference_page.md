@@ -11,6 +11,8 @@
 <br>https://www.stackvidhya.com/change-order-of-columns-in-pandas-dataframe/
 <br>https://www.educative.io/edpresso/how-to-delete-a-column-in-pandas
 <br>https://www.geeksforgeeks.org/python-pandas-dataframe-set_index/?ref=lbp
+<br>https://www.kaggle.com/questions-and-answers/181664 
+<br>https://www.tutorialspoint.com/How-to-round-down-to-2-decimals-a-float-using-Python
 <br>
 <br>SQL/Postgresql
 <br>https://www.sqlines.com/postgresql/datatypes/text#:~:text=The%20only%20difference%20between%20TEXT,more%20than%20255%20characters%20long.
