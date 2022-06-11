@@ -69,8 +69,8 @@ SQL functions can be used to create queries to join tables and answer questions,
 <br>
 
 ## Findings
-- With the original restaurant data, we started with a total of 5,000 rows. We wanted to narrow it down to restaurs with rating scores and pricings, removing the NULL values. After cleaning the data, we were left with 1,907 rows of data. Thus, working with about 38% of the original data. 
-- For the menu data, all NULL values in the description column, we had 87,285 rows of NULL values out of 403,240 total rows. We determined it is useful to keep the description column and all of the rows. Instances where it would be counter productive to delete the entire row for a NULL 'description' are where 'name' gives us sides like 'fries' or 'okra' and 'description' is blank. If we delete the entire row, we would lose the information of what sides certain restaurants offer.
+- With the original restaurant data, we started with a total of 5,000 rows. We wanted to narrow it down to restaurants with rating scores and pricings, removing the NULL values. After cleaning the data, we were left with 1,907 rows of data. Thus, working with about 38% of the original data. 
+- For the restaurant menu data, we had 87,285 rows of NULL values in the description column out of 403,240 total rows. We determined it is useful to keep the description column and all of the rows. Instances where it would be counter productive to delete the entire row for a NULL 'description' could be where 'name' gives us sides like 'fries' or 'okra' and 'description' is blank. If we delete the entire row, we would lose the information of what sides certain restaurants offer and therefore lose valuable data.
 
 <br>
 
