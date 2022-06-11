@@ -114,8 +114,64 @@ original_restaurant_df.to_sql(name='original_restaurants', con=engine, if_exists
     SELECT * FROM restaurants;
     SELECT * FROM menu; 
 ```
+27. Lastly, you can create a ```schema.sql``` for later use inside pgAdmin.
 
+<i>Note: We use VSCode to create schema.sql</i>
 
+28. Open repository inside VSCode, then select 'New File' and save it as 'schema.sql'.
+29. Use code to add drop tables, if they already exist:
+```
+  DROP TABLE IF EXISTS original_restaurants;
+  DROP TABLE IF EXISTS restaurants;
+  DROP TABLE IF EXISTS menu;
+```
+30. Use create table function to create tables:
+
+<i>Restaurant tables have the primary key:</i>
+```
+CREATE TABLE original_restaurants (
+    id BIGINT PRIMARY KEY,
+    name TEXT,
+    score DOUBLE PRECISION,
+    ratings DOUBLE PRECISION,
+    category TEXT,
+    price_range TEXT,
+    full_address TEXT,
+    street TEXT,
+    city texT,
+    state TEXT,
+    zip_code BIGINT,
+    lat DOUBLE PRECISION,
+    lng DOUBLE PRECISION
+);
+CREATE TABLE restaurants (
+    id BIGINT PRIMARY KEY,
+    name TEXT,
+    score DOUBLE PRECISION,
+    ratings DOUBLE PRECISION,
+    category TEXT,
+    price_range TEXT,
+    full_address TEXT,
+    street TEXT,
+    city texT,
+    state TEXT,
+    zip_code BIGINT,
+    lat DOUBLE PRECISION,
+    lng DOUBLE PRECISION
+);
+```
+
+<i>Menu table will have the foreign key:</i>
+
+```
+CREATE TABLE menu (
+    restaurant_id BIGINT FOREIGN KEY REFERENCES restaurants(id),
+    category TEXT,
+    name TEXT,
+    description TEXT,
+    price TEXT
+);
+```
 
 
 <br>
