@@ -18,17 +18,6 @@ SQL functions can be used to create queries to join tables and answer questions,
 6. Where are the highest-rated restaurands located?
 7. Is there a relationship between ratings and location?
 
-### Contributors
-<b>Stefanie Gagnon</b>
-  - Found and chose Restaurant dataset to analyze.
-  - Jupyter Notebook data cleanup and coding. 
-  - Postsql schema & queries.
-
-<b>Blanca Carretero</b>
-- Found and chose Restaurant dataset to analyze.
-- Found questions for analysis and description of value the data has in real-world situations.
-- Readme formatting and Presentation of final analysis.
-
 <br>
 
 ## Inside Respository
@@ -36,6 +25,18 @@ SQL functions can be used to create queries to join tables and answer questions,
 - Schema.sql for table creation in Postgresql.
 - Query.sql for visualizing the exported tables.
 - Resources folder including CSV files and references.
+
+<br>
+
+## Instructions
+#### Installation
+1. Gather restaurant data and CSV files from <a href="https://www.kaggle.com/datasets/ahmedshahriarsakib/uber-eats-usa-restaurants-menus?resource=download)">Kaggle</a> by selecting Download in top-right corner of page. A zipped file will be downloaded including the CSV files for restaurants and menu information. Select both CSV files and save them in a folder of your choosing.
+2. Clone this repository to your machine.
+3. Move folder with restaurant CSV files into repository folder.
+4. Make sure the libraries that are being used are installed (Pandas, OS, CSV, SQLAlchemy).
+5. Open repository in Jupyter Notebook using the appropiate command line interface.
+#### Usage
+6. 
 
 <br>
 
@@ -75,8 +76,20 @@ SQL functions can be used to create queries to join tables and answer questions,
 <br>
 
 ## Future Considerations
+- For the restaurant menu data, combining the name column with the description column could be more useful.
 - With these particular dataset, it is an additional possibility to use data inside an API (such as google places API) to gather more information of other surrounding restaurants, additional data for the restaurants found in the original dataset, and data for the unrated restaurans.
 - Could use the latitude/longitute information in dataset to gather more insights on restaurants (such as open/close times, additional ratings and reviews).
 - Could have done comparison analysis using APIs for city population and ratings for listed restaurants.
 - Could possibly compare highly-rated restaurants with population and menu items from these restaurants.
 
+<br> 
+### Contributors
+<b>Stefanie Gagnon</b>
+  - Found and chose Restaurant dataset to analyze.
+  - Jupyter Notebook data cleanup and coding. 
+  - Postsql schema & queries.
+
+<b>Blanca Carretero</b>
+- Found and chose Restaurant dataset to analyze.
+- Found questions for analysis and description of value the data has in real-world situations.
+- Readme formatting and Presentation of final analysis.
