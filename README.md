@@ -8,6 +8,15 @@ This project is designed to conduct a presentation of business information by ex
 
 The purpose of this project was to build a database that demonstrates insights within various restaurants across the US. The database is built on by ingesting, combining, and restructuring data from our main data source into one Postgresql database in order to gain valuable insights.
 
+### Questions Data Can Answer
+1. How many Restaurants are around the USA?
+2. What are the Most Popular/Highly Rated Restaurants and menus?
+3. Is there any relationship between the price level and the popularity of a restaurant?
+4. Which menus are more expensive?
+5. Which menus are very common in the USA?
+6. Where are the highest-rated restaurands located?
+7. Is there a relationship between ratings and location?
+
 ### Contributors
 <b>Stefanie Gagnon</b>
   - Found and chose Restaurant dataset to analyze.
@@ -18,15 +27,6 @@ The purpose of this project was to build a database that demonstrates insights w
 - Found and chose Restaurant dataset to analyze.
 - Found questions for analysis and description of value the data has in real-world situations.
 - Readme formatting and Presentation of final analysis.
-
-### Questions to be answered:
-1. How many Restaurants are around the USA?
-2. What are the Most Popular/Highly Rated Restaurants and menus?
-3. Is there any relationship between the price level and the popularity of a restaurant?
-4. Which menus are more expensive?
-5. Which menus are very common in the USA?
-6. Where are the highest-rated restaurands located?
-7. Is there a relationship between ratings and location?
 
 <br>
 
