@@ -3,27 +3,23 @@
 ![alt text](https://www.jotform.com/blog/wp-content/uploads/2020/04/ubereats-alternatives.jpg)
 
 
-### Introduction
-------
-This project is designed to conduct a presentation of business information or Business Intelligence by extracting, transforming, and loading data of restaurants and menus in the US that are partnered with Uber Eats.
+## Introduction
+This project is designed to conduct a presentation of business information by extracting, transforming, and loading data of restaurants and menus in the US that are partnered with Uber Eats.
 
 The purpose of this project was to build a database that demonstrates insights within various restaurants across the US. The database is built on by ingesting, combining, and restructuring data from our main data source into one Postgresql database in order to gain valuable insights.
 
+### Contributors
+<b>Stefanie Gagnon</b>
+  - Found and chose Restaurant dataset to analyze.
+  - Jupyter Notebook data cleanup and coding. 
+  - Postsql schema & queries.
 
-#### Contributors
-------
-##### Stefanie Gagnon 
-- Found and chose Restaurant dataset to analyze.
-- Jupyter Notebook data cleanup and coding. 
-- Postsql schema & queries.
-
-##### Blanca Carretero
+<b>Blanca Carretero</b>
 - Found and chose Restaurant dataset to analyze.
 - Found questions for analysis and description of value the data has in real-world situations.
 - Readme formatting and Presentation of final analysis.
 
-
-#### Questions to be answered:
+### Questions to be answered:
 1. How many Restaurants are around the USA?
 2. What are the Most Popular/Highly Rated Restaurants and menus?
 3. Is there any relationship between the price level and the popularity of a restaurant?
@@ -32,23 +28,23 @@ The purpose of this project was to build a database that demonstrates insights w
 6. Where are the highest-rated restaurands located?
 7. Is there a relationship between ratings and location?
 
-&nbsp;
-### Inside Respository
+<br>
+
+## Inside Respository
 - Jupyter Notebook for importing, transforming, and loading data using Pandas, OS, CSV, and SQLAlchemy.
 - Schema.sql for table creation in Postgresql.
 - Query.sql for visualizing the exported tables.
 - Resources folder including CSV files and references.
 
+<br>
 
-&nbsp;
-### Our Process
-
-#### Data Import
+## Our Process
+### Data Import
 - Found Uber Eats Restaurant Data from Kaggle.com.
 - See our <a href="https://github.com/skgag1216/Project-2/blob/main/Resources/References/reference_page.md#references">Reference Page</a> for link to Kaggle dataset and download-able CSVs.
 - Imported CSV files into Jupyter Notebook for data cleanup and transformation.
 
-#### Data Transformation
+### Data Transformation
 - Used a Pandas functions in Jupyter Notebook to transform all CSV files and cleaned data.
 - Reviewed the files and transformed into a dataframes.
 - Used python transformation functions for data cleaning and filtering.
@@ -62,15 +58,16 @@ The purpose of this project was to build a database that demonstrates insights w
 - Inspected the menu data for NULL values and determined all NULL values were in the "description" column.
 - Determined it was valuable to keep NULL values in this column for analysis (see notes in Jupyter Notebook).
 
-#### Data Loading
+### Data Loading
 - Inside Jupyter Notebook, we created a database connection using SQLAlchemy.
 - Created Restaurant database (restaurant_db) in Postgresql, then ran database connection code.
 - A total of three tables were loaded successfully.
 - Final tables/collections were stored in the database.
 - Loaded data frames into the database using SQLAlchemy coding.
 
-&nbsp;
-### Future Considerations
+<br>
+
+## Future Considerations
 - With these particular dataset, it is an additional possibility to use data inside an API (such as google places API) to gather more information of other surrounding restaurants, additional data for the restaurants found in the original dataset, and data for the unrated restaurans.
 - Could use the latitude/longitute information in dataset to gather more insights on restaurants (such as open/close times, additional ratings and reviews).
 - Could have done comparison analysis using APIs for city population and ratings for listed restaurants.
